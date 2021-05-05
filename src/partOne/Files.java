@@ -6,21 +6,21 @@ import java.nio.file.Paths;
 
 public class Files {
 
-    public static void createFile(){
+    public void createFile(String nombre){
+
         File obj = new File("C:\\User\\Axterix\\dir\\userInput.txt");
     }
-    public static void newDir(){
+    public void newDir(){
         File obj = new File("C:\\Users\\Axterix\\dir");
         obj.mkdir();
     }
-    public static void moveFile(){
+    public void moveFile(){
         File obj = new File("C:\\User\\Axterix\\dir\\userInput.txt");
         obj.renameTo(new File("C:\\User\\Axterix\\Documents\\userInput.txt"));
 
     }
-    public static void listFiles(){
-        File obj = new File("C:\\User\\Axterix\\dir\\userInput.txt");
-        obj.renameTo(new File("C:\\User\\Axterix\\dir\\userInput.txt.bck"));
+    public void listFiles(String nombre){
+        File obj = new File(nombre);
         String[] paths;
         paths = obj.list();
 
@@ -30,9 +30,8 @@ public class Files {
 
 
     }
-    public static void deleteFile(){
+    public void deleteFile(){
         File obj = new File("C:\\User\\Axterix\\dir\\userInput.txt");
         obj.delete();
     }
-
 }

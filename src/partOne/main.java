@@ -9,6 +9,7 @@ import java.util.List;
 public class main {
     public static void main(String[] args) {
         List<Circle> listCircle = new ArrayList<Circle>();
+
         List<ResizableCircle> listResizable = new ArrayList<ResizableCircle>();
         for(int i = 0; i < 2501; i++) {
             listCircle.add(new Circle(Math.random()));
@@ -19,6 +20,8 @@ public class main {
         GenericUtility g = new GenericUtility();
 
         g.collectionsToArray(listCircle);
+        g.searchArea(listCircle);
+        g.circleToResizable(listCircle);
 
     }
 }
